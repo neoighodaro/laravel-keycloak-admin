@@ -9,6 +9,7 @@ use LaravelKeycloakAdmin\Services\Client;
 use LaravelKeycloakAdmin\Services\ClientRole;
 use LaravelKeycloakAdmin\Services\Role;
 use LaravelKeycloakAdmin\Services\User;
+use LaravelKeycloakAdmin\Services\Addon;
 
 class AdminService
 {
@@ -32,6 +33,7 @@ class AdminService
            'Role' => Role::class,
            'Client' => Client::class,
            'ClientRole' => ClientRole::class,
+           'Addon' => Addon::class
         ];
     }
 
@@ -53,5 +55,10 @@ class AdminService
     public function clientRole()
     {
         return $this->getService('ClientRole');
+    }
+
+    public function addon()
+    {
+        return $this->getService('Addon');
     }
 }
