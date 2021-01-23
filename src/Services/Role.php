@@ -1,8 +1,8 @@
 <?php
 
-namespace Mnikoei\Services;
+namespace Haizad\Services;
 
-use Mnikoei\Auth\ClientAuthService;
+use Haizad\Auth\ClientAuthService;
 use GuzzleHttp\ClientInterface;
 use Illuminate\Support\Arr;
 
