@@ -1,6 +1,6 @@
 {
     "name": "haizad/laravel-keycloak-admin",
-    "description": "This package supports Keycloak admin client api`s",
+    "description": "This package supports Keycloak Admin Rest API",
     "require": {
         "guzzlehttp/guzzle": "^7.0"
     },
@@ -25,7 +25,7 @@
             "LaravelKeycloakAdmin\\": "src/"
         },
         "files": [
-            "src/lumen-helpers.php"
+            "src/LumenHelper.php"
         ]
     },
     "extra" : {
@@ -34,10 +34,5 @@
                 "LaravelKeycloakAdmin\\KeycloakAdminServiceProvider"
             ]
         }
-    },
-    "scripts": {
-        "post-autoload-dump": [
-            "mkdir -p config"
-        ]
     }
 }

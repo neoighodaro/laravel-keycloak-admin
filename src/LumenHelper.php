@@ -2,6 +2,10 @@
 
 if ( ! function_exists('config_path'))
 {
+    
+    if (!file_exists(app()->basePath() . '/config')) {
+        mkdir(app()->basePath() . '/config', 0755, true);
+    }
     /**
      * Get the configuration path.
      *
