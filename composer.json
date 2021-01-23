@@ -23,10 +23,7 @@
     "autoload": {
         "psr-4": {
             "LaravelKeycloakAdmin\\": "src/"
-        },
-        "files": [
-            "src/LumenHelper.php"
-        ]
+        }
     },
     "extra" : {
         "laravel" : {
