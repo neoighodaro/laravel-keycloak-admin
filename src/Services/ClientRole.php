@@ -1,6 +1,6 @@
 <?php
 
-namespace Mnikoei\Services;
+namespace Haizad\Services;
 
 use Mnikoei\Auth\ClientAuthService;
 use GuzzleHttp\ClientInterface;
