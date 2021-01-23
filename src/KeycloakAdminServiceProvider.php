@@ -2,8 +2,8 @@
 
 namespace LaravelKeycloakAdmin;
 
-use LaravelKeycloakAdmin\AdminService;
 use Illuminate\Support\ServiceProvider;
+use LaravelKeycloakAdmin\AdminService;
 
 class KeycloakAdminServiceProvider extends ServiceProvider
 {
@@ -14,7 +14,12 @@ class KeycloakAdminServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('KeycloakAdmin' , function ($app){
+        //Added for Lumen.
+        if (!file_exists(base_path() . '/config')) {
+            mkdir(base_path() . '/config', 0755, true);
+        }
+        
+        $this->app->bind('KeycloakAdmin', function ($app) {
             return $app->make(AdminService::class);
         });
 
@@ -26,9 +31,9 @@ class KeycloakAdminServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    {        
+    {
         $this->publishes([
-            __DIR__.'/Config/keycloakAdmin.php' => base_path() . '/config/keycloakAdmin.php'
-        ] , 'KeycloakAdmin');
+            __DIR__ . '/Config/keycloakAdmin.php' => base_path() . '/config/keycloakAdmin.php',
+        ], 'KeycloakAdmin');
     }
 }
