@@ -63,6 +63,7 @@ Package has provided services as below:
 * role
 * client
 * clientRole
+* addon
 
 
 
@@ -117,14 +118,25 @@ KeycloakAdmin::role()->get([
      'id' => 'role_id'
 
 ]);
+```
 
-/**Additional Method 
- * 
- * Logout User session by user Id
-*/
+### Additional Methods 
 
+#### Logout User session by user Id
+
+```
 KeycloakAdmin::addon()->logoutById([
      'id' => 'user_id'
+])
+```
+
+#### Set Expiry Access Token
+
+```
+KeycloakAdmin::addon()->setAccessTokenExpiry([
+     'body' => [
+             'accessTokenLifespan' => 60
+       ]
 ])
 
 ```

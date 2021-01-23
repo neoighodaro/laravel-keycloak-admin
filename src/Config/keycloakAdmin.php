@@ -141,10 +141,14 @@ return [
             ]
         ],
 
-        
+
         'addon' => [
             'logoutById' => [
                 'api' => "{$baseUrl}/users/{id}/logout" ,
+                'method' => 'post'
+            ],
+            'setAccessTokenExpiry' => [
+                'api' => "{$baseUrl}/" ,
                 'method' => 'post'
             ]
         ],
