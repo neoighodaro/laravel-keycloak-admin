@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Mnikoei\Services;
+namespace Haizad\Services;
 
 
 use GuzzleHttp\ClientInterface;
 use Illuminate\Support\Arr;
-use Mnikoei\Auth\ClientAuthService;
+use Haizad\Auth\ClientAuthService;
 
 abstract class Service
 {
