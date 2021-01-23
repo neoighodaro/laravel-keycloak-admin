@@ -26,10 +26,7 @@ class KeycloakAdminServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    {
-        //Added for Lumen.
-        mkdir(base_path() . '/config', 0755, true);
-        
+    {        
         $this->publishes([
             __DIR__.'/Config/keycloakAdmin.php' => base_path() . '/config/keycloakAdmin.php'
         ] , 'KeycloakAdmin');
