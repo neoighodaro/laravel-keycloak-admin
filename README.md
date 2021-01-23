@@ -10,8 +10,8 @@ https://gitlab.com/scito-performance/keycloak-admin
 --------
 
 ### Supports
-Laravel 8
-Lumen 8
+<li>Laravel 8</li>
+<li>Lumen 8</li>
 
 ### Installation
 
