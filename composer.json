@@ -1,6 +1,6 @@
 {
     "name": "haizad/laravel-keycloak-admin",
-    "description": "This package supports Keycloak admin client api`s",
+    "description": "This package supports Keycloak administrator client API for Laravel 8",
     "require": {
         "guzzlehttp/guzzle": "^7.0"
     },
