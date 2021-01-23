@@ -8,19 +8,26 @@
     "authors": [
         {
             "name": "mnikoei",
-            "email": "mohsen.nikoei@gmail.com"
+            "email": "mohsen.nikoei@gmail.com",
+            "role": "developer creator"
+        },
+        {
+            "name": "Haizad",
+            "email": "haizadannuar@gmail.com",
+            "homepage": "https://github.com/haizad",
+            "role": "contributing developer"
         }
     ],
     "minimum-stability": "dev",
     "autoload" : {
         "psr-4" : {
-            "Mnikoei\\": "src/"
+            "Haizad\\": "src/"
         }
     },
     "extra" : {
         "laravel" : {
             "providers" : [
-                "Mnikoei\\KeycloakAdminServiceProvider"
+                "Haizad\\KeycloakAdminServiceProvider"
             ]
         }
     }
