@@ -16,13 +16,23 @@ composer require haizad/laravel-keycloak-admin
 
 ### Copy the package config to your local config with the publish command:
 
+#### Laravel only
 ```shell
 php artisan vendor:publish --provider="LaravelKeycloakAdmin\KeycloakAdminServiceProvider"
 ```
 
-#### laravel-keycloak-admin
+#### Lumen only
 
+Register the provider in your boostrap app file ```bootstrap/app.php```
 
+Add the following line in the "Register Service Providers"  section at the bottom of the file. 
+
+```php
+$app->register(\KeycloakGuard\KeycloakGuardServiceProvider::class);
+```
+For facades, uncomment ```$app->withFacades();``` in your boostrap app file ```bootstrap/app.php```
+
+### Environment Setup
 
 Add these environment variables to your .env :
 
