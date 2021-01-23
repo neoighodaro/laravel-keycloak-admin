@@ -1,13 +1,17 @@
-### Installtion
+### A special thank you goes to Mnikoei (Original creator of laravel-keycloak-admin project.)
+
+
+
+### Installation
 
 ```
-composer require mnikoei/laravel-keycloak-admin
+composer require haizad/laravel-keycloak-admin
 ```
 
 ### Copy the package config to your local config with the publish command:
 
 ```shell
-php artisan vendor:publish --provider="Mnikoei\KeycloakAdminServiceProvider"
+php artisan vendor:publish --provider="Haizad\KeycloakAdminServiceProvider"
 ```
 
 #### laravel-keycloak-admin
@@ -61,31 +65,38 @@ All api's are decleared in ```config\keycloakAdmin.php```
  
 For every api just needs call api name as method on related service .
 
+### Usages
 
+Include the KeycloakAdmin inside your Laravel controller/API route
+```
+use Haizad\Facades\KeycloakAdmin;
+```
 
 Example:
 ```php
 KeycloakAdmin::serviceName()->apiName($parameters)
 
 
-
-keycloakAdmin::user()->create([
-      
-     'body' => [  // https://www.keycloak.org/docs-api/7.0/rest-api/index.html#_userrepresentation
-             
-             'username' => 'foo'
-              
-       ]
-
+KeycloakAdmin::user()->create([
+                'body' => [
+                        'username' => 'foo',
+                        'enabled' => true,
+                        'emailVerified' => false,
+                        'email' => 'foo@email.com',
+                        'credentials' => [[
+                            'type' => 'password',
+                            'value' => 'foobar',
+                            'temporary' => false
+                        ]]
+                  ]
 ]);
 
 
-
-keycloakAdmin::user()->update([
+KeycloakAdmin::user()->update([
 
      'id' => 'user_id',
 
-     'body' => [  // https://www.keycloak.org/docs-api/7.0/rest-api/index.html#_userrepresentation
+     'body' => [  // https://www.keycloak.org/docs-api/11.0/rest-api/index.html#_userrepresentation
              
              'username' => 'foo'
               
@@ -95,11 +106,11 @@ keycloakAdmin::user()->update([
 
 
 
-keycloakAdmin::role()->get([
+KeycloakAdmin::role()->get([
       
      'id' => 'role_id'
 
 ]);
 ```
 
-All other api calls are same as examples just needs to provide required parameters as described in https://www.keycloak.org/docs-api/7.0/rest-api/index.html
+All other api calls are same as examples just needs to provide required parameters as described in https://www.keycloak.org/docs-api/11.0/rest-api/index.html
