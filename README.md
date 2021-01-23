@@ -1,7 +1,13 @@
-### A special thank you goes to Mnikoei (Original creator of laravel-keycloak-admin project)
+### This is a forked repository from https://github.com/Mnikoei/laravel-keycloak-admin
 
+Original work credited to Mnikoei. 
 
+### Alternative
 
+Keycloak Admin library made by Scito. 
+https://gitlab.com/scito-performance/keycloak-admin
+
+--------
 ### Installation
 
 ```
