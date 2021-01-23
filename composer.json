@@ -1,6 +1,6 @@
 {
     "name": "haizad/laravel-keycloak-admin",
-    "description": "This package supports Keycloak Admin Rest API",
+    "description": "Keycloak Admin Rest API for Laravel/Lumen",
     "require": {
         "guzzlehttp/guzzle": "^7.0"
     },

@@ -8,6 +8,11 @@ Keycloak Admin library made by Scito.
 https://gitlab.com/scito-performance/keycloak-admin
 
 --------
+
+### Supports
+Laravel 8
+Lumen 8
+
 ### Installation
 
 ```
