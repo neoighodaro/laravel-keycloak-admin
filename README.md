@@ -28,7 +28,7 @@ Register the provider in your boostrap app file ```bootstrap/app.php```
 Add the following line in the "Register Service Providers"  section at the bottom of the file. 
 
 ```php
-$app->register(\KeycloakGuard\KeycloakGuardServiceProvider::class);
+$app->register(\LaravelKeycloakAdmin\KeycloakAdminServiceProvider::class);
 ```
 For facades, uncomment ```$app->withFacades();``` in your boostrap app file ```bootstrap/app.php```
 
