@@ -22,13 +22,13 @@
     "minimum-stability": "dev",
     "autoload" : {
         "psr-4" : {
-            "Haizad\\": "src/"
+            "LaravelKeycloakAdmin\\": "src/"
         }
     },
     "extra" : {
         "laravel" : {
             "providers" : [
-                "Haizad\\KeycloakAdminServiceProvider"
+                "LaravelKeycloakAdmin\\KeycloakAdminServiceProvider"
             ]
         }
     }

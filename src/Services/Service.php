@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Haizad\Services;
+namespace LaravelKeycloakAdmin\Services;
 
 
 use GuzzleHttp\ClientInterface;
 use Illuminate\Support\Arr;
-use Haizad\Auth\ClientAuthService;
+use LaravelKeycloakAdmin\Auth\ClientAuthService;
 
 abstract class Service
 {

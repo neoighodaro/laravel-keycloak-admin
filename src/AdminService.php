@@ -1,14 +1,14 @@
 <?php
 
-namespace Mnikoei;
+namespace LaravelKeycloakAdmin;
 
-use Mnikoei\Auth\ClientAuthService;
+use LaravelKeycloakAdmin\Auth\ClientAuthService;
 use GuzzleHttp\Client as HttpClient;
 use Illuminate\Http\Request;
-use Mnikoei\Services\Client;
-use Mnikoei\Services\ClientRole;
-use Mnikoei\Services\Role;
-use Mnikoei\Services\User;
+use LaravelKeycloakAdmin\Services\Client;
+use LaravelKeycloakAdmin\Services\ClientRole;
+use LaravelKeycloakAdmin\Services\Role;
+use LaravelKeycloakAdmin\Services\User;
 
 class AdminService
 {

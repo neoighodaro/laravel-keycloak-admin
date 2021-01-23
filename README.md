@@ -11,7 +11,7 @@ composer require haizad/laravel-keycloak-admin
 ### Copy the package config to your local config with the publish command:
 
 ```shell
-php artisan vendor:publish --provider="Haizad\KeycloakAdminServiceProvider"
+php artisan vendor:publish --provider="LaravelKeycloakAdmin\KeycloakAdminServiceProvider"
 ```
 
 #### laravel-keycloak-admin
@@ -69,7 +69,7 @@ For every api just needs call api name as method on related service .
 
 Include the KeycloakAdmin inside your Laravel controller/API route
 ```
-use Haizad\Facades\KeycloakAdmin;
+use LaravelKeycloakAdmin\Facades\KeycloakAdmin;
 ```
 
 Example:
