@@ -1,8 +1,8 @@
 <?php
 
-namespace Haizad\Services;
+namespace LaravelKeycloakAdmin\Services;
 
-use Mnikoei\Auth\ClientAuthService;
+use LaravelKeycloakAdmin\Auth\ClientAuthService;
 use GuzzleHttp\ClientInterface;
 use Illuminate\Support\Arr;
 
