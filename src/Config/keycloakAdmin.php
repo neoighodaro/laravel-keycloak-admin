@@ -138,7 +138,15 @@ return [
             'getEffectiveRealmRoles' => [
                 'api' => "{$baseUrl}/users/{id}/role-mappings/realm/composite" ,
                 'method' => 'get'
-            ],
+            ]
+        ],
+
+        
+        'addon' => [
+            'logoutById' => [
+                'api' => "{$baseUrl}/users/{id}/logout" ,
+                'method' => 'post'
+            ]
         ],
 
 

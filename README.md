@@ -1,4 +1,4 @@
-### A special thank you goes to Mnikoei (Original creator of laravel-keycloak-admin project.)
+### A special thank you goes to Mnikoei (Original creator of laravel-keycloak-admin project)
 
 
 
@@ -96,7 +96,7 @@ KeycloakAdmin::user()->update([
 
      'id' => 'user_id',
 
-     'body' => [  // https://www.keycloak.org/docs-api/11.0/rest-api/index.html#_userrepresentation
+     'body' => [
              
              'username' => 'foo'
               
@@ -111,6 +111,16 @@ KeycloakAdmin::role()->get([
      'id' => 'role_id'
 
 ]);
+
+/**Additional Method 
+ * 
+ * Logout User session by user Id
+*/
+
+KeycloakAdmin::addon()->logoutById([
+     'id' => 'user_id'
+])
+
 ```
 
 All other api calls are same as examples just needs to provide required parameters as described in https://www.keycloak.org/docs-api/11.0/rest-api/index.html
