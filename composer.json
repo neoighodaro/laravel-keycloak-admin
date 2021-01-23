@@ -20,10 +20,13 @@
         }
     ],
     "minimum-stability": "dev",
-    "autoload" : {
-        "psr-4" : {
+    "autoload": {
+        "psr-4": {
             "LaravelKeycloakAdmin\\": "src/"
-        }
+        },
+        "files": [
+            "src/lumen-helpers.php"
+        ]
     },
     "extra" : {
         "laravel" : {
@@ -31,5 +34,10 @@
                 "LaravelKeycloakAdmin\\KeycloakAdminServiceProvider"
             ]
         }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "mkdir -p config"
+        ]
     }
 }

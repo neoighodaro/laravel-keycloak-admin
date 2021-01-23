@@ -8,35 +8,12 @@ use Illuminate\Support\Arr;
 
 class Addon extends Service
 {
-    /**
-     * Client constructor.
-     * @param ClientAuthService $auth
-     * @param ClientInterface $http
-     */
     public function __construct(ClientAuthService $auth , ClientInterface $http)
     {
         parent::__construct($auth, $http);
-
         $this->api = config('keycloakAdmin.api.addon');
     }
 
-    /**
-     * @param $clientId
-     * @return mixed|null
-     */
-    public function getByClientId($clientId)
-    {
-        $clients = Arr::where($this->all(), function ($client) use ($clientId){
-            return $client['clientId'] === $clientId ;
-        });
-
-        return Arr::first($clients);
-    }
-
-    /**
-     * @param $response
-     * @return bool
-     */
     public function response($response)
     {
         if (!empty( $location = $response->getHeader('location') )){
