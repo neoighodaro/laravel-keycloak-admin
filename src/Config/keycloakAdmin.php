@@ -89,12 +89,10 @@ return [
                 'api' => "{$baseUrl}/users/{id}" ,
                 'method' => 'put'
             ],
-
             'delete' => [
                 'api' => "{$baseUrl}/users/{id}" ,
                 'method' => 'delete'
             ],
-
             'groups' => [
                 'api' => "{$baseUrl}/users/{id}/groups" ,
                 'method' => 'get'
