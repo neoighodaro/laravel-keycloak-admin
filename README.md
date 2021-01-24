@@ -93,11 +93,13 @@ Package has provided services as below:
 * addon
 
 
+Available functions:
 
+* Create User
+* Get All User
+* Query User
 
-All api's are decleared in ```config\keycloakAdmin.php```
- 
-For every api just needs call api name as method on related service .
+All API's are declared in ```config\keycloakAdmin.php```
 
 ### Usages
 
@@ -110,7 +112,8 @@ Example:
 ```php
 KeycloakAdmin::serviceName()->apiName($parameters)
 
-
+//Create User Sample
+//Refer https://www.keycloak.org/docs-api/11.0/rest-api/index.html#_userrepresentation
 KeycloakAdmin::user()->create([
                 'body' => [
                         'username' => 'foo',
@@ -125,26 +128,17 @@ KeycloakAdmin::user()->create([
                   ]
 ]);
 
-
-KeycloakAdmin::user()->update([
-
-     'id' => 'user_id',
-
-     'body' => [
-             
-             'username' => 'foo'
-              
-       ]
-
+//Query User Sample
+//Refer Query parameter on GET /{realm}/users https://www.keycloak.org/docs-api/11.0/rest-api/index.html
+KeycloakAdmin::user()->find([
+            'query' => [ 
+                 'email' => 'foobar@example.com'
+            ]
 ]);
 
+//Get All User Sample
+KeycloakAdmin::user()->all();
 
-
-KeycloakAdmin::role()->get([
-      
-     'id' => 'role_id'
-
-]);
 ```
 
 ### Additional Methods 

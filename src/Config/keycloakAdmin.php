@@ -73,6 +73,10 @@ return [
                 'method' => 'post',
                 'api' => "{$baseUrl}/users"
             ],
+            'filter' => [
+                'api' => "{$baseUrl}/users",
+                'method' => 'get'
+            ],
             'all' => [
                 'api' => "{$baseUrl}/users",
                 'method' => 'get'
