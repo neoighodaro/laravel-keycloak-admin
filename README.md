@@ -30,15 +30,26 @@ php artisan vendor:publish --provider="LaravelKeycloakAdmin\KeycloakAdminService
 
 Register the provider in your boostrap app file ```bootstrap/app.php```
 
-Add the following line in the respective  sections at the file. 
+Add the following line at that files. Please note that 
+```$app->configure('keycloakAdmin');``` should be placed below 
+```$app->register(\LaravelKeycloakAdmin\KeycloakAdminServiceProvider::class);```.
 
 ```php
-//"Register Config Files" section
-$app->configure('keycloakAdmin');
 
 //"Register Service Providers"  section
 $app->register(\LaravelKeycloakAdmin\KeycloakAdminServiceProvider::class);
+$app->configure('keycloakAdmin');
+
+$app->router->group([
+    'namespace' => 'App\Http\Controllers',
+], function ($router) {
+    require __DIR__.'/../routes/web.php';
+});
+
+return $app;
+
 ```
+
 For facades, uncomment ```$app->withFacades();``` in your boostrap app file ```bootstrap/app.php```
 
 ### Environment Setup
