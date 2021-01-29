@@ -14,12 +14,6 @@ class KeycloakAdminServiceProvider extends ServiceProvider
      */
     public function register()
     {   
-        if (!file_exists(base_path() . '/config')) {
-            mkdir(base_path() . '/config', 0755, true);
-            copy(__DIR__ . '/Config/keycloakAdmin.php',base_path() . '/config/keycloakAdmin.php');
-        }else{
-        }
-
         $this->app->bind('KeycloakAdmin', function ($app) {
             return $app->make(AdminService::class);
         });
