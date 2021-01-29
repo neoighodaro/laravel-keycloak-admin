@@ -28,6 +28,9 @@ php artisan vendor:publish --provider="LaravelKeycloakAdmin\KeycloakAdminService
 
 #### Lumen only
 
+Create a ``config`` folder in the root directory.
+Copy ```keycloakAdmin.php``` from ```vendor/haizad/laravel-keycloak-admin/src/Config/```, and paste into ```config``` folder.
+
 Register the provider in your boostrap app file ```bootstrap/app.php```
 
 Add the following line at that files. Please note that 
