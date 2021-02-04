@@ -153,7 +153,7 @@ return [
                 'api' => "{$baseUrl}/" ,
                 'method' => 'post'
             ],
-            'syncLDAP' => [
+            'testLDAPConnection' => [
                 'api' => "{$baseUrl}/testLDAPConnection" ,
                 'method' => 'post'
             ]
