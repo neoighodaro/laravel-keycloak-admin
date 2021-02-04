@@ -152,6 +152,10 @@ return [
             'setAccessTokenExpiry' => [
                 'api' => "{$baseUrl}/" ,
                 'method' => 'post'
+            ],
+            'syncLDAP' => [
+                'api' => "{$baseUrl}/testLDAPConnection" ,
+                'method' => 'post'
             ]
         ],
 
