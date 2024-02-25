@@ -15,8 +15,10 @@ class AdminService
 {
     protected $container = [];
 
-    function __construct(ClientAuthService $auth) {
+    protected ClientAuthService $auth;
 
+    function __construct(ClientAuthService $auth) 
+    {
         $this->auth = $auth;
         $this->registerServices();
     }
